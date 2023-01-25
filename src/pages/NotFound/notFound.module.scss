@@ -1,0 +1,36 @@
+@use "../../styles/abstracts/mixins" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding-inline: 5vh;
+
+  * {
+    color: var(--clr-main);
+  }
+
+  h1 {
+    font-size: clamp(96px, 22vw, 288px);
+    margin-top: 169px;
+
+    @include mobile {
+      margin-top: 195px;
+    }
+  }
+
+  h2 {
+    font-size: clamp(18px, 4vw, 36px);
+    font-weight: 400;
+    text-align: center;
+    margin-top: clamp(11px, 5vw, 66px);
+    margin-bottom: auto;
+  }
+
+  a {
+    margin-bottom: auto;
+    font-size: clamp(14px, 2vw, 18px);
+    text-decoration: underline;
+  }
+}
