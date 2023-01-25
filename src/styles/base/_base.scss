@@ -6,4 +6,7 @@
 
 body {
   min-height: 100vh;
+  --clr-main: #ff6060;
+  padding-block: clamp(20px, 2vw, 40px);
+  padding-inline: clamp(20px, 2vw, 100px);
 }

@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  ul {
+    display: flex;
+    gap: clamp(10px, 6vw - 1.5rem, 57px);
+
+    a {
+      color: var(--clr-main);
+      font-size: 24;
+      text-decoration: underline;
+    }
+  }
+}

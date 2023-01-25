@@ -1,0 +1,8 @@
+.container {
+  width: clamp(145px, 30vw, 210px);
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}

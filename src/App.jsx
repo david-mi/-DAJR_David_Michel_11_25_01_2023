@@ -1,7 +1,10 @@
+import Header from "./pages/Header/Header";
+
 const App = () => {
   return (
-    <div className="App">
-    </div>
+    <>
+      <Header />
+    </>
   );
 };
 
