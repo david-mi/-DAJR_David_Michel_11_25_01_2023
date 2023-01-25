@@ -5,8 +5,13 @@
 }
 
 body {
-  min-height: 100vh;
   --clr-main: #ff6060;
-  padding-block: clamp(20px, 2vw, 40px);
-  padding-inline: clamp(20px, 2vw, 100px);
+}
+
+#root {
+  min-height: 100vh;
+  padding-inline: clamp(20px, 9vw - 1.8vmax, 100px);
+  padding-block: clamp(20px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
 }
