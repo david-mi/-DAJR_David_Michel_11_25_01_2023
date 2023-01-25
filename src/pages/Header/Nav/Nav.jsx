@@ -1,15 +1,16 @@
 import React from 'react';
 import styles from "./nav.module.scss";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <nav className={styles.nav}>
       <ul>
         <li>
-          <a href="/">Accueil</a>
+          <Link to="/">Accueil</Link>
         </li>
         <li>
-          <a href="/about">A Propos</a>
+          <Link to="/about">A Propos</Link>
         </li>
       </ul>
     </nav>
