@@ -16,6 +16,7 @@
     height: 100%;
     object-fit: cover;
     width: 100%;
+    animation: slide 600ms forwards cubic-bezier(0.17, 0.67, 0.16, 1.22);
   }
 
   h2 {
@@ -25,5 +26,17 @@
     color: white;
     font-size: 18px;
     font-weight: 400;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: scale(0);
+    border-radius: 100%;
+  }
+
+  to {
+    transform: translate(1);
+    border-radius: none;
   }
 }
