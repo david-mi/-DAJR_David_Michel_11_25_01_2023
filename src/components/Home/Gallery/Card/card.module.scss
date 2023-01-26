@@ -3,13 +3,13 @@
   height: clamp(255px, 24vw, 340px);
   border-radius: 10px;
   overflow: hidden;
-  background-color: #ff6060;
 
   &::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 1;
   }
 
   img {
@@ -26,6 +26,7 @@
     color: white;
     font-size: 18px;
     font-weight: 400;
+    z-index: 2;
   }
 }
 
