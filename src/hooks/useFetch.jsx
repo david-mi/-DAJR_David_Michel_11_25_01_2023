@@ -9,7 +9,9 @@ const useFetch = (url) => {
     async function getData() {
       try {
         setIsLoading(true);
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        // simulating long wait from api
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+
         const response = await fetch(url);
         const data = await response.json();
 

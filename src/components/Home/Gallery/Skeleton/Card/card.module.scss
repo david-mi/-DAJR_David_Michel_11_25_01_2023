@@ -1,0 +1,28 @@
+.card {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: clamp(255px, 24vw, 340px);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ff6060;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-size: 400% 400%;
+    animation: gradient 1000ms alternate infinite;
+  }
+}
+
+@keyframes gradient {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 100% 100%;
+  }
+}
