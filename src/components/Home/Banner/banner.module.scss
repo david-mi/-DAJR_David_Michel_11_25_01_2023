@@ -1,0 +1,19 @@
+@use "../../../styles/abstracts/mixins" as *;
+
+.banner {
+  position: relative;
+  border-radius: clamp(10px, 2vw, 25px);
+  margin-top: clamp(16px, 4.5vw, 63px);
+  overflow: hidden;
+
+  .expression {
+    @include absoluteCenter;
+    font-size: clamp(24px, 4vw, 48px);
+    color: white;
+    width: 80%;
+    text-align: center;
+    @include mobile {
+      text-align: left;
+    }
+  }
+}
