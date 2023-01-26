@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 209px;
+  background-color: var(--clr-footer);
+  margin-top: auto;
+  margin-inline: clamp(-100px, -9vw - (-1.8vmax), -20px);
+
+  .copyright {
+    margin-top: 28px;
+    font-size: 24px;
+    font-size: clamp(12px, 2vw, 24px);
+    color: white;
+  }
+
+  .logo {
+    width: 122px;
+  }
+}

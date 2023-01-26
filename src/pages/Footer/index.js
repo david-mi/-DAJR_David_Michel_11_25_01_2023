@@ -1,0 +1,1 @@
+export { default as KasaLogo } from "../../svg/KasaLogo";
