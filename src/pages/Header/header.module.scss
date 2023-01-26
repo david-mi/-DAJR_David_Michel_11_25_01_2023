@@ -1,3 +1,11 @@
 .header {
   display: flex;
+
+  .logo {
+    width: clamp(145px, 30vw, 210px);
+
+    path {
+      fill: var(--clr-main);
+    }
+  }
 }
