@@ -1,0 +1,1 @@
+export const logementsUrl = "logements.json";

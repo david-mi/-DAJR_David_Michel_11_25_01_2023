@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styles from "./card.module.scss";
 
-const Card = () => {
+const Card = ({ logement }) => {
+  const { id, title, cover, description } = logement;
+
   return (
-    <div className={styles.card}>
-      <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg" alt="" />
-      <h2>Titre de la location</h2>
-    </div>
+    <Link to="#" className={styles.link}>
+      <img src={cover} alt={description} />
+      <h2>{title}</h2>
+    </Link>
   );
 };
 
