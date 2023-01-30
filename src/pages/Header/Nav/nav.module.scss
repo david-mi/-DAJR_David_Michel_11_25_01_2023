@@ -1,3 +1,5 @@
+@use "../../../styles/abstracts/mixins" as *;
+
 .nav {
   display: flex;
   align-items: center;
@@ -9,8 +11,17 @@
 
     a {
       color: var(--clr-main);
-      font-size: 24;
-      text-decoration: underline;
+
+      font-size: clamp(12px, 3vw, 24px);
+      font-weight: 500;
+
+      &.link-home {
+        text-decoration: underline;
+      }
+
+      @include mobile {
+        text-transform: uppercase;
+      }
     }
   }
 }
