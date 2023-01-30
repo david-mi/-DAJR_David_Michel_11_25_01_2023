@@ -2,11 +2,11 @@ import React from 'react';
 import { Card } from "../index";
 import styles from "./galery.module.scss";
 import useFetch from "../../../hooks/useFetch";
-import { logementsUrl } from "../../../urls";
+import { lodgingsUrl } from "../../../urls";
 import Skeleton from "./Skeleton/Skeleton";
 
 const Gallery = () => {
-  const { data, isLoading, error } = useFetch(logementsUrl);
+  const { data, isLoading, error } = useFetch(lodgingsUrl);
 
   return (
     <div className={styles.gallery}>

@@ -1,1 +1,1 @@
-export const logementsUrl = "logements.json";
+export const lodgingsUrl = "lodgings.json";
