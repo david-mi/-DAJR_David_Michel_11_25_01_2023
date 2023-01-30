@@ -6,7 +6,7 @@ const Card = ({ logement }) => {
   const { id, title, cover, description } = logement;
 
   return (
-    <Link to="#" className={styles.link}>
+    <Link to={id} className={styles.link}>
       <img src={cover} alt={description} />
       <h2>{title}</h2>
     </Link>
