@@ -1,3 +1,4 @@
+import "./types";
 import Router from "./Router";
 
 const App = () => {
