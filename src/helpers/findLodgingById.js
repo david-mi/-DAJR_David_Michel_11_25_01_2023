@@ -14,3 +14,5 @@ const findLodgingById = (lodgings, lodgingId) => {
 
   return foundLodging || null;
 };
+
+export default findLodgingById;
