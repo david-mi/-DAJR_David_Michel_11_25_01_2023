@@ -25,11 +25,12 @@
     font-weight: 400;
     text-align: center;
     margin-top: clamp(11px, 5vw, 66px);
-    margin-bottom: auto;
+    margin-bottom: clamp(133px, 15vw, 186px);
   }
 
   a {
-    margin-bottom: auto;
+    // margin-bottom: 159px;
+    margin-bottom: clamp(159px, 30vh - 15vw, 236px);
     font-size: clamp(14px, 2vw, 18px);
     text-decoration: underline;
   }
