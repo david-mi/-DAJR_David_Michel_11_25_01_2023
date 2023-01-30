@@ -6,15 +6,15 @@ import { lodgingsUrl } from "../../urls";
 import NotFound from "../../pages/NotFound/NotFound";
 import Loader from "../Loader/Loader";
 import findLodgingById from "../../helpers/findLodgingById";
+import { Carousel } from "./index";
 
 const Lodging = () => {
   const { id: lodgingId } = useParams();
   const { data: lodgings, isLoading, error } = useFetch(lodgingsUrl);
-  const [lodging, setLodging] = useState({});
+  const [lodging, setLodging] = useState("pending");
 
   useEffect(() => {
     if (isLoading === false) {
-      console.log(lodgings);
       const foundLodging = findLodgingById(lodgings, lodgingId);
       setLodging(foundLodging);
     }
@@ -24,13 +24,14 @@ const Lodging = () => {
     return <NotFound />;
   }
 
+  if (lodging === "pending") {
+    return <Loader dotColor="black" />;
+  }
+
   return (
     <main className={styles.lodging}>
       {error && error.message}
-      {isLoading
-        ? <Loader dotColor="black" />
-        : "Carousel"
-      }
+      {lodging && <Carousel pictures={lodging.pictures} />}
     </main>
   );
 };

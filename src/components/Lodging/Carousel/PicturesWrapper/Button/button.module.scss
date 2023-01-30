@@ -1,0 +1,19 @@
+.hide {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: center;
+
+  &.left {
+    left: 23px;
+  }
+
+  &.right {
+    right: 23px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
