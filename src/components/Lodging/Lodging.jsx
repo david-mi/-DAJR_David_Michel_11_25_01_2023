@@ -10,11 +10,11 @@ import { Carousel } from "./index";
 
 const Lodging = () => {
   const { id: lodgingId } = useParams();
-  const { data: lodgings, isLoading, error } = useFetch(lodgingsUrl);
+  const { data: lodgings, isWatingFetch, error } = useFetch(lodgingsUrl);
   const [lodging, setLodging] = useState("pending");
 
   useEffect(() => {
-    if (isLoading === false) {
+    if (isWatingFetch === false) {
       const foundLodging = findLodgingById(lodgings, lodgingId);
       setLodging(foundLodging);
     }

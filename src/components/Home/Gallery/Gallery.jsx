@@ -6,12 +6,12 @@ import { lodgingsUrl } from "../../../urls";
 import Skeleton from "./Skeleton/Skeleton";
 
 const Gallery = () => {
-  const { data, isLoading, error } = useFetch(lodgingsUrl);
+  const { data, isWatingFetch, error } = useFetch(lodgingsUrl);
 
   return (
     <div className={styles.gallery}>
       {error && error.message}
-      {isLoading && <Skeleton size={9} />}
+      {isWatingFetch && <Skeleton size={9} />}
       {data.map((logement) => {
         return <Card key={logement.id} logement={logement} />;
       })}

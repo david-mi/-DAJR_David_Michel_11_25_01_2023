@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 const useFetch = (url) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isWatingFetch, setisWatingFetch] = useState(true);
 
   useEffect(() => {
     async function getData() {
       try {
-        setIsLoading(true);
+        setisWatingFetch(true);
         // simulating long wait from api
         await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -23,14 +23,14 @@ const useFetch = (url) => {
       } catch (error) {
         setError(error);
       } finally {
-        setIsLoading(false);
+        setisWatingFetch(false);
       }
     }
 
     getData();
   }, []);
 
-  return { data, isLoading, error };
+  return { data, isWatingFetch, error };
 };
 
 export default useFetch;
