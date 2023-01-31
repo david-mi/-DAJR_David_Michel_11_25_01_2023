@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from "./home.module.scss";
-import { Banner, Gallery } from "./index";
+import { Gallery } from "./index";
+import Banner from "../Common/Banner/Banner";
 
 const Home = () => {
   return (
     <main className={styles.home}>
-      <Banner />
+      <Banner title="Chez vous, partout et ailleurs" />
       <Gallery />
     </main>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./picture.module.scss";
-import bannerPicture from "./picture.jpg";
+import bannerHome from "./home.jpg";
 
 const Picture = () => {
   return (

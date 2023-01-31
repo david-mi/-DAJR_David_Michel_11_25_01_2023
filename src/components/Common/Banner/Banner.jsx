@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from "./banner.module.scss";
 
-import { Picture } from "../index";
+import { Picture } from "./index";
 
-const Banner = () => {
+const Banner = ({ title }) => {
   return (
     <div className={styles.banner}>
       <Picture />
-      <p className={styles.expression}>Chez vous, partout et ailleurs</p>
+      {title && <h1 className={styles.expression}>{title}</h1>}
     </div>
   );
 };
