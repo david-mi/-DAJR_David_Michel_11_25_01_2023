@@ -3,10 +3,8 @@ import { useParams } from "react-router-dom";
 import styles from "./lodging.module.scss";
 import useFetch from "../../hooks/useFetch";
 import { lodgingsUrl } from "../../urls";
-import NotFound from "../../pages/NotFound/NotFound";
-import Loader from "../Loader/Loader";
 import findLodgingById from "../../helpers/findLodgingById";
-import { Carousel } from "./index";
+import { NotFound, Loader, Carousel, Informations } from "./index";
 
 const Lodging = () => {
   const { id: lodgingId } = useParams();
@@ -40,6 +38,7 @@ const Lodging = () => {
         ? <Carousel pictures={lodging.pictures} />
         : <img src={lodging.pictures[0]} />
       }
+      <Informations lodging={lodging} />
     </main>
   );
 };
