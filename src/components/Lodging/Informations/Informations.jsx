@@ -13,8 +13,14 @@ const Informations = ({ lodging }) => {
       <Host host={host} />
       <Tags tags={tags} />
       <Rating rating={rating} />
-      <Collapse content={description} name="Description" />
-      <Collapse content={equipments} name="Équipements" />
+      <Collapse name="Description">
+        <p>{description}</p>
+      </Collapse>
+      <Collapse name="Équipements">
+        <ul >
+          {equipments.map((equipment) => <li key={equipment}>{equipment}</li>)}
+        </ul>
+      </Collapse>
     </div>
   );
 };

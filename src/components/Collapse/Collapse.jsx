@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import styles from "./collapse.module.scss";
 import { DropDownButton } from "./index";
 
-const Collapse = ({ content, name }) => {
+const Collapse = ({ name, children }) => {
   const [showContent, setShowContent] = useState(false);
-  const isContentArray = Array.isArray(content);
 
   return (
     <div className={styles.collapse}>
@@ -13,14 +12,11 @@ const Collapse = ({ content, name }) => {
         showContent={showContent}
         setShowContent={setShowContent}
       />
-      {showContent && (isContentArray
-        ? (
-          <ul className={styles.content}>
-            {content.map((info) => <li key={info}>{info}</li>)}
-          </ul>
-        )
-        : <p className={styles.content}>{content}</p>)
-      }
+      {showContent && (
+        <div className={styles.content}>
+          {children}
+        </div>
+      )}
     </div>
   );
 };
