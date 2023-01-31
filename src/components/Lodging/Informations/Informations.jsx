@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./informations.module.scss";
-import { Title, Location, Host } from "./index";
+import { Title, Location, Host, Tags } from "./index";
 
 const Informations = ({ lodging }) => {
   const { title, location, host, tags, rating, description, equipment } = lodging;
@@ -10,6 +10,7 @@ const Informations = ({ lodging }) => {
       <Title title={title} />
       <Location location={location} />
       <Host host={host} />
+      <Tags tags={tags} />
     </div>
   );
 };
