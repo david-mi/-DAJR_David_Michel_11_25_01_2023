@@ -1,0 +1,8 @@
+.collapses {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 31px);
+  max-width: 1023px;
+  margin-inline: auto;
+  margin-block: clamp(19px, 3vw, 31px);
+}
