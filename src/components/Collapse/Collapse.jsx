@@ -6,7 +6,7 @@ const Collapse = ({ name, children }) => {
   const [showContent, setShowContent] = useState(false);
 
   return (
-    <div className={styles.collapse}>
+    <article className={styles.collapse}>
       <DropDownButton
         name={name}
         showContent={showContent}
@@ -17,7 +17,7 @@ const Collapse = ({ name, children }) => {
           {children}
         </div>
       )}
-    </div>
+    </article>
   );
 };
 

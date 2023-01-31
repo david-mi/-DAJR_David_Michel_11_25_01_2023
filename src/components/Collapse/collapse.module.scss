@@ -3,6 +3,7 @@
   flex-direction: column;
 
   .content {
+    flex: 1;
     background-color: #f6f6f6;
     font-weight: 400;
     font-size: clamp(12px, 2vw, 18px);
