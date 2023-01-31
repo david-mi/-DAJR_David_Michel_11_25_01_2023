@@ -1,16 +1,26 @@
 import React from 'react';
 import styles from "./nav.module.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link to="/" className={styles["link-home"]}>Accueil</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) => isActive ? styles.active : ""}
+          >
+            Accueil
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">A Propos</Link>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => isActive ? styles.active : ""}
+          >
+            A Propos
+          </NavLink>
         </li>
       </ul>
     </nav>
