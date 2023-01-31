@@ -10,6 +10,12 @@
   }
 }
 
+@mixin medium {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+
 @mixin absoluteCenter {
   position: absolute;
   left: 50%;

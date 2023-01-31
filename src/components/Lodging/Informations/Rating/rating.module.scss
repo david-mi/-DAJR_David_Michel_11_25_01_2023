@@ -1,7 +1,14 @@
+@use "../../../../styles/abstracts/mixins" as *;
+
 .rating {
   grid-area: rating;
   display: flex;
   align-items: center;
+  justify-self: flex-end;
+
+  @include medium {
+    justify-self: flex-start;
+  }
 
   svg {
     width: clamp(18px, 3vw, 36px);

@@ -1,3 +1,42 @@
-* {
-  color: var(--clr-main);
+@use "../../../styles/abstracts/mixins" as *;
+
+.informations {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto 1fr;
+  row-gap: clamp(10px, 3vw, 20px);
+  column-gap: clamp(20px, 5vw, 75px);
+  grid-template-areas:
+    "title host"
+    "location ."
+    "tags rating"
+    "description equipment";
+  margin-top: clamp(15px, 3vw, 30px);
+  margin-bottom: clamp(40px, 6vw, 100px);
+
+  @include medium {
+    grid-template-rows: auto auto auto auto auto 1fr;
+    grid-template-areas:
+      "title title"
+      "location location"
+      "tags tags"
+      "rating host"
+      "description description"
+      "equipment equipment";
+  }
+
+  * {
+    color: var(--clr-main);
+  }
+
+  article:nth-child(6) {
+    grid-area: description;
+    align-self: stretch;
+  }
+
+  article:nth-child(7) {
+    grid-area: equipment;
+    align-self: stretch;
+  }
 }
