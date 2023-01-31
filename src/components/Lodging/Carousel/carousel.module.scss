@@ -1,3 +1,5 @@
+@use "../../../styles/abstracts/mixins" as *;
+
 .carousel {
   width: 100%;
   max-width: 1920px;
@@ -5,6 +7,19 @@
   height: clamp(255px, 40vw, 415px);
   border-radius: 25px;
   overflow: hidden;
+
+  .counter {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: 500;
+
+    @include mobile {
+      display: none;
+    }
+  }
 
   img {
     width: 100%;

@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from "./button.module.scss";
-import { ArrowIcon } from "../../../index";
+import styles from "./browseButton.module.scss";
+import { ArrowIcon } from "../../index";
 
 const Button = ({ options }) => {
   const { handler, direction, display } = options;

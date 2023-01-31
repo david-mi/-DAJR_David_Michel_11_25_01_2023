@@ -13,6 +13,8 @@ const Lodging = () => {
   const { data: lodgings, isWatingFetch, error } = useFetch(lodgingsUrl);
   const [lodging, setLodging] = useState("pending");
 
+  const hasMultiplePictures = lodgings.length > 0;
+
   useEffect(() => {
     if (isWatingFetch === false) {
       const foundLodging = findLodgingById(lodgings, lodgingId);
@@ -28,10 +30,16 @@ const Lodging = () => {
     return <Loader dotColor="black" />;
   }
 
+  if (error) {
+    return error.message;
+  }
+
   return (
     <main className={styles.lodging}>
-      {error && error.message}
-      {lodging && <Carousel pictures={lodging.pictures} />}
+      {hasMultiplePictures
+        ? <Carousel pictures={lodging.pictures} />
+        : <img src={lodging.pictures[0]} />
+      }
     </main>
   );
 };

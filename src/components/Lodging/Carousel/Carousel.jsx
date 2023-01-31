@@ -1,15 +1,36 @@
+import React, { useEffect, useState } from 'react';
 import styles from "./carousel.module.scss";
-import { PicturesWrapper } from "../index";
+import { BrowseButton } from "../index";
 
 const Carousel = ({ pictures }) => {
-  const hasMultiplePictures = pictures.length - 1 > 0;
+  const [picture, setPicture] = useState(pictures[0]);
+  const [pictureIndex, setPictureIndex] = useState(0);
+
+  /** Set previous index in pictures array and get back to last index if previous index < 0 */
+  function handlePreviousPicture() {
+    if (pictureIndex <= 0) {
+      return setPictureIndex(pictures.length - 1);
+    }
+
+    setPictureIndex((previousValue) => previousValue - 1);
+  }
+
+  /** Set next index in pictures array and get back to 0 if index reaches pictures length */
+  function handleNextPicture() {
+    setPictureIndex((previousValue) => (previousValue + 1) % pictures.length);
+  }
+
+  useEffect(() => {
+    setPicture(pictures[pictureIndex]);
+  }, [pictureIndex]);
+
 
   return (
     <div className={styles.carousel}>
-      {hasMultiplePictures
-        ? <PicturesWrapper pictures={pictures} />
-        : <img src={pictures[0]} />
-      }
+      <BrowseButton options={{ handler: handlePreviousPicture, direction: "left" }} />
+      <img src={picture} />
+      <div className={styles.counter}>{pictureIndex + 1} / {pictures.length}</div>
+      <BrowseButton options={{ handler: handleNextPicture, direction: "right" }} />
     </div>
   );
 };
