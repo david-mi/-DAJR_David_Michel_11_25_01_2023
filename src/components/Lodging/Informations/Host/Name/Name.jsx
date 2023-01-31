@@ -1,9 +1,9 @@
 import React from 'react';
 import style from "./name.module.scss";
 
-const Name = () => {
+const Name = ({ name }) => {
   return (
-    <div>Name</div>
+    <div className={style.name}>{name}</div>
   );
 };
 
