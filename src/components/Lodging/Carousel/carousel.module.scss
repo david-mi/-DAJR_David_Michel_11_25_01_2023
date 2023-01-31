@@ -5,7 +5,7 @@
   max-width: 1920px;
   position: relative;
   height: clamp(255px, 40vw, 415px);
-  border-radius: 25px;
+  border-radius: clamp(10px, 2vw, 25px);
   overflow: hidden;
 
   .counter {
