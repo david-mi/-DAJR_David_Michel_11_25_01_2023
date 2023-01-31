@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./footer.module.scss";
-import { KasaLogo } from "./index";
+import KasaLogo from "../../components/Common/KasaLogo";
 
 const Footer = () => {
   return (

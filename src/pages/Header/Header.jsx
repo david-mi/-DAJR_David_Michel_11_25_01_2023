@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./header.module.scss";
-import { Nav, KasaLogo } from "./index";
+import { Nav } from "./index";
+import KasaLogo from "../../components/Common/KasaLogo";
 
 const Header = () => {
   return (
