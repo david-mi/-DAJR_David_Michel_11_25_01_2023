@@ -28,7 +28,7 @@ const Carousel = ({ pictures }) => {
   return (
     <div className={styles.carousel}>
       <BrowseButton options={{ handler: handlePreviousPicture, direction: "left" }} />
-      <img src={picture} />
+      <img src={picture} key={picture} />
       <div className={styles.counter}>{pictureIndex + 1} / {pictures.length}</div>
       <BrowseButton options={{ handler: handleNextPicture, direction: "right" }} />
     </div>

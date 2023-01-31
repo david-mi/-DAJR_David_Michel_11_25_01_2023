@@ -6,7 +6,9 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
   transform-origin: center;
+  height: clamp(20px, 7vw - 1vh, 80px);
 
   &.left {
     left: 23px;

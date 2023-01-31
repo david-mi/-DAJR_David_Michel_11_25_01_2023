@@ -21,13 +21,17 @@
     }
   }
 
-  svg {
-    height: clamp(20px, 7vw - 1vh, 80px);
+  @keyframes fade {
+    to {
+      opacity: 1;
+    }
   }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.4;
+    animation: fade 800ms ease-out forwards;
   }
 }
