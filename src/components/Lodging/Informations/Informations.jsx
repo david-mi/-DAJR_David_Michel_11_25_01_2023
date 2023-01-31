@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./informations.module.scss";
-import { Title, Location, Host, Tags, Rating } from "./index";
+import { Title, Location, Host, Tags, Rating, Description, Equipments } from "./index";
 import Collapse from "../../Collapse/Collapse";
 
 const Informations = ({ lodging }) => {
@@ -14,12 +14,10 @@ const Informations = ({ lodging }) => {
       <Tags tags={tags} />
       <Rating rating={rating} />
       <Collapse name="Description">
-        <p>{description}</p>
+        <Description description={description} />
       </Collapse>
       <Collapse name="Équipements">
-        <ul >
-          {equipments.map((equipment) => <li key={equipment}>{equipment}</li>)}
-        </ul>
+        <Equipments equipments={equipments} />
       </Collapse>
     </div>
   );
