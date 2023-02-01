@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocation } from "react-router-dom";
 import styles from "./banner.module.scss";
 
 import { Picture } from "./index";

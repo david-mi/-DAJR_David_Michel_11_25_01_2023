@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./dropDownButton.module.scss";
-import ArrowIcon from "../../Common/ArrowIcon";
+import ArrowIcon from "../../svg/ArrowIcon/ArrowIcon";
 
 const Button = ({ name, showContent, setShowContent }) => {
   const buttonClassName = `${styles.button} ${showContent ? styles.show : ""}`;
