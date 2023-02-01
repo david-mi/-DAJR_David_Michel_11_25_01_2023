@@ -6,7 +6,7 @@ import { lodgingsUrl } from "../../urls";
 import findLodgingById from "../../helpers/findLodgingById";
 import NotFound from "../../pages/NotFound/NotFound";
 import Loader from "../Loader/Loader";
-import Carousel from "./Carousel/Carousel";
+import { Carousel, Picture } from "./index";
 import Informations from "../Informations/Informations";
 
 const Lodging = () => {
@@ -39,7 +39,7 @@ const Lodging = () => {
     <main className={styles.lodging}>
       {hasMultiplePictures
         ? <Carousel pictures={lodging.pictures} />
-        : <img src={lodging.pictures[0]} />
+        : <Picture src={lodging.pictures[0]} alt="photo de la location" />
       }
       <Informations lodging={lodging} />
     </main>

@@ -1,0 +1,16 @@
+.picture {
+  @keyframes fade {
+    to {
+      opacity: 1;
+    }
+  }
+
+  opacity: 0.4;
+  animation: fade 800ms ease-out forwards;
+  object-fit: cover;
+  width: 100%;
+  max-width: 1920px;
+  height: clamp(255px, 40vw, 415px);
+  border-radius: clamp(10px, 2vw, 25px);
+  overflow: hidden;
+}

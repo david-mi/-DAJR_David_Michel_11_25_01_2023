@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./carousel.module.scss";
-import { BrowseButton } from "./index";
+import { BrowseButton, Picture } from "./index";
 
 const Carousel = ({ pictures }) => {
   const [picture, setPicture] = useState(pictures[0]);
@@ -28,7 +28,7 @@ const Carousel = ({ pictures }) => {
   return (
     <div className={styles.carousel}>
       <BrowseButton options={{ handler: handlePreviousPicture, direction: "left" }} />
-      <img src={picture} key={picture} alt={"photo de la location " + (pictureIndex + 1)} />
+      <Picture src={picture} key={picture} alt={"photo de la location " + (pictureIndex + 1)} />
       <div className={styles.counter}>{pictureIndex + 1} / {pictures.length}</div>
       <BrowseButton options={{ handler: handleNextPicture, direction: "right" }} />
     </div>
