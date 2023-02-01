@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./browseButton.module.scss";
-import ArrowIcon from "../../svg/ArrowIcon/ArrowIcon";
+import ArrowIcon from "../../../svg/ArrowIcon/ArrowIcon";
 
 const Button = ({ options }) => {
   const { handler, direction, display } = options;

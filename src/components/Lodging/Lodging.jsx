@@ -4,22 +4,22 @@ import styles from "./lodging.module.scss";
 import useFetch from "../../hooks/useFetch";
 import { lodgingsUrl } from "../../urls";
 import findLodgingById from "../../helpers/findLodgingById";
-import NotFound from "../NotFound/NotFound";
-import Loader from "../../components/Loader/Loader";
-import Carousel from "../../components/Carousel/Carousel";
-import Informations from "../../components/Informations/Informations";
+import NotFound from "../../pages/NotFound/NotFound";
+import Loader from "../Loader/Loader";
+import Carousel from "./Carousel/Carousel";
+import Informations from "../Informations/Informations";
 
 const Lodging = () => {
   const { id: lodgingId } = useParams();
   const { data: lodgings, isWatingFetch, error } = useFetch(lodgingsUrl);
   const [lodging, setLodging] = useState("pending");
-
-  const hasMultiplePictures = lodgings.length > 0;
+  const [hasMultiplePictures, setHasMultiplePictures] = useState(false);
 
   useEffect(() => {
     if (isWatingFetch === false) {
       const foundLodging = findLodgingById(lodgings, lodgingId);
       setLodging(foundLodging);
+      setHasMultiplePictures(foundLodging.pictures.length > 1);
     }
   }, [lodgings]);
 
