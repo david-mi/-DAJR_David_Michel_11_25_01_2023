@@ -1,5 +1,11 @@
 .header {
   display: flex;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
 
   .logo {
     width: clamp(145px, 30vw, 210px);
