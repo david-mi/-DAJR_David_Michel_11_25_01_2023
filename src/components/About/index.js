@@ -1,1 +1,0 @@
-export { default as Collapses } from "./Collapses/Collapses";

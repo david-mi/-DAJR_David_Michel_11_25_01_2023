@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./collapses.module.scss";
-import Collapse from "../../Collapse/Collapse";
+import Collapse from "../Collapse/Collapse";
 import { aboutData } from "./data";
 
 const Collapses = () => {

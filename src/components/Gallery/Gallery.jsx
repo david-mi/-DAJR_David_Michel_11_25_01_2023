@@ -1,9 +1,8 @@
 import React from 'react';
-import { Card } from "../index";
+import { Card, Skeleton } from "./index";
 import styles from "./galery.module.scss";
-import useFetch from "../../../hooks/useFetch";
-import { lodgingsUrl } from "../../../urls";
-import Skeleton from "./Skeleton/Skeleton";
+import useFetch from "../../hooks/useFetch";
+import { lodgingsUrl } from "../../urls";
 
 const Gallery = () => {
   const { data, isWatingFetch, error } = useFetch(lodgingsUrl);

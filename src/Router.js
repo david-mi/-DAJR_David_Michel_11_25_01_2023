@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./pages/Header/Header";
-import Footer from "./pages/Footer/Footer";
-import Home from "./components/Home/Home";
-import Lodging from "./components/Lodging/Lodging";
-import About from "./components/About/About";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home/Home";
+import Lodging from "./pages/Lodging/Lodging";
+import About from "./pages/About/About";
 import NotFound from "./pages/NotFound/NotFound";
 
 const Router = () => {

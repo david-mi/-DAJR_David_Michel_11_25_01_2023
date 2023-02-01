@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./carousel.module.scss";
-import { BrowseButton } from "../index";
+import { BrowseButton } from "./index";
 
 const Carousel = ({ pictures }) => {
   const [picture, setPicture] = useState(pictures[0]);

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./about.module.scss";
-import { Collapses } from "./index";
-import Banner from "../Common/Banner/Banner";
+import Collapses from "../../components/Collapses/Collapses";
+import Banner from "../../components/Common/Banner/Banner";
 
 const About = () => {
   return (

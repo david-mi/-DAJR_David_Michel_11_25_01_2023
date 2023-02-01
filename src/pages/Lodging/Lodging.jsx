@@ -4,7 +4,10 @@ import styles from "./lodging.module.scss";
 import useFetch from "../../hooks/useFetch";
 import { lodgingsUrl } from "../../urls";
 import findLodgingById from "../../helpers/findLodgingById";
-import { NotFound, Loader, Carousel, Informations } from "./index";
+import NotFound from "../NotFound/NotFound";
+import Loader from "../../components/Loader/Loader";
+import Carousel from "../../components/Carousel/Carousel";
+import Informations from "../../components/Informations/Informations";
 
 const Lodging = () => {
   const { id: lodgingId } = useParams();
