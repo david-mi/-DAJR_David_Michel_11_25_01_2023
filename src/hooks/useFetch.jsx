@@ -19,12 +19,12 @@ import "../types";
 const useFetch = (lodgingId) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
-  const [isWatingFetch, setisWatingFetch] = useState(true);
+  const [isWaitingFetch, setIsWaitingFetch] = useState(true);
 
   useEffect(() => {
     async function getData() {
       try {
-        setisWatingFetch(true);
+        setIsWaitingFetch(true);
         // simulating long wait from api
         await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -40,14 +40,14 @@ const useFetch = (lodgingId) => {
       } catch (error) {
         setError(error);
       } finally {
-        setisWatingFetch(false);
+        setIsWaitingFetch(false);
       }
     }
 
     getData();
   }, []);
 
-  return { data, isWatingFetch, error };
+  return { data, isWaitingFetch, error };
 };
 
 export default useFetch;

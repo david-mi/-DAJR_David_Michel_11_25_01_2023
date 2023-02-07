@@ -9,7 +9,7 @@ import Informations from "../Informations/Informations";
 
 const Lodging = () => {
   const { id: lodgingId } = useParams();
-  const { data: lodging, isWatingFetch, error } = useFetch(lodgingId);
+  const { data: lodging, isWaitingFetch, error } = useFetch(lodgingId);
   const [hasMultiplePictures, setHasMultiplePictures] = useState(false);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Lodging = () => {
     }
   }, [lodging]);
 
-  if (isWatingFetch) {
+  if (isWaitingFetch) {
     return <Loader dotColor="black" />;
   }
 
