@@ -19,7 +19,10 @@ const Lodging = () => {
     if (isWatingFetch === false) {
       const foundLodging = findLodgingById(lodgings, lodgingId);
       setLodging(foundLodging);
-      setHasMultiplePictures(foundLodging.pictures.length > 1);
+
+      if (foundLodging !== null) {
+        setHasMultiplePictures(foundLodging.pictures.length > 1);
+      }
     }
   }, [lodgings]);
 
