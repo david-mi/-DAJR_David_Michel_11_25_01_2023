@@ -1,5 +1,4 @@
 import { lodgingsUrl } from "../urls";
-import findLodgingById from "../helpers/findLodgingById";
 
 const throwError = (errorMessage) => {
   throw new Error(errorMessage);
@@ -17,11 +16,13 @@ export const lodgingServices = {
     return lodgings;
   },
 
-  async getOneLodging(lodgingId) {
+  async getLodgingById(lodgingId) {
     const lodgings = await this.getAllLodgings(lodgingsUrl);
-    const foundLodging = findLodgingById(lodgings, lodgingId);
+    const foundLodging = lodgings.find((lodging) => {
+      return lodging.id === lodgingId;
+    });
 
-    if (foundLodging === null) {
+    if (foundLodging === undefined) {
       throwError("Lodging not found");
     }
 

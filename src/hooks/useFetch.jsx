@@ -16,7 +16,7 @@ const useFetch = (lodgingId) => {
         let apiData = "";
 
         if (lodgingId) {
-          apiData = await lodgingServices.getOneLodging(lodgingId);
+          apiData = await lodgingServices.getLodgingById(lodgingId);
         } else {
           apiData = await lodgingServices.getAllLodgings();
         }
