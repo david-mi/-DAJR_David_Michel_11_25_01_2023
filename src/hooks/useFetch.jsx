@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
+import { lodgingServices } from "../services/lodging";
 
-const useFetch = (url) => {
-  const [data, setData] = useState([]);
+const useFetch = (lodgingId) => {
+  const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [isWatingFetch, setisWatingFetch] = useState(true);
 
@@ -12,14 +13,15 @@ const useFetch = (url) => {
         // simulating long wait from api
         await new Promise((resolve) => setTimeout(resolve, 1000));
 
-        const response = await fetch(url);
-        const data = await response.json();
+        let apiData = "";
 
-        if (response.ok === false) {
-          throw new Error("failed to fetch");
+        if (lodgingId) {
+          apiData = await lodgingServices.getOneLodging(lodgingId);
+        } else {
+          apiData = await lodgingServices.getAllLodgings();
         }
 
-        setData(data);
+        setData(apiData);
       } catch (error) {
         setError(error);
       } finally {
