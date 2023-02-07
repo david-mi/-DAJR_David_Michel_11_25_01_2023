@@ -1,5 +1,10 @@
 import React from 'react';
 import styles from "./title.module.scss";
+import "../../../types";
+
+/**
+ *  @param { Lodging } title
+ */
 
 const Title = ({ title }) => {
   return (

@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from "./picture.module.scss";
 
+/**
+ * @param {string} image 
+ */
+
 const Picture = ({ image }) => {
   const { src, alt } = image;
 

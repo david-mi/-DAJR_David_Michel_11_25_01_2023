@@ -1,3 +1,5 @@
+import "../types";
+
 /**
  * Find on lodgings the one who fits the given id
  * - returns null if nothing is found

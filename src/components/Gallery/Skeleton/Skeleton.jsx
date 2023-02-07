@@ -1,8 +1,12 @@
 import React from 'react';
 import SkeletonCard from "./Card/Card";
 
-const Skeleton = ({ size }) => {
-  const skeletonArray = new Array(size).fill("");
+/**
+ * @param {number} length length of skeletonArray
+ */
+
+const Skeleton = ({ length }) => {
+  const skeletonArray = new Array(length).fill("");
 
   return (
     <>

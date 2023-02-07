@@ -1,5 +1,10 @@
 import React from 'react';
 import styles from "./picture.module.scss";
+import "../../../../types";
+
+/**
+ *  @param { Lodging } host
+ */
 
 const Picture = ({ host }) => {
   return (

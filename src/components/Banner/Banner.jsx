@@ -3,6 +3,13 @@ import styles from "./banner.module.scss";
 
 import { Picture } from "./index";
 
+/**
+ * @param {{
+ *  title: string
+ *  image: string
+ * }} 
+ */
+
 const Banner = ({ title, image }) => {
   return (
     <div className={styles.banner}>

@@ -1,4 +1,9 @@
 import React from 'react';
+import "../../../types";
+
+/**
+ *  @param { Lodging } equipments
+ */
 
 const Equipments = ({ equipments }) => {
   return (

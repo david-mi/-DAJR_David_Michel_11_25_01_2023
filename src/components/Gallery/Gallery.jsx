@@ -10,9 +10,9 @@ const Gallery = () => {
   return (
     <div className={styles.gallery}>
       {error && error.message}
-      {isWatingFetch && <Skeleton size={9} />}
-      {data.map((logement) => {
-        return <Card key={logement.id} logement={logement} />;
+      {isWatingFetch && <Skeleton length={9} />}
+      {data.map((lodging) => {
+        return <Card key={lodging.id} lodging={lodging} />;
       })}
     </div>
   );

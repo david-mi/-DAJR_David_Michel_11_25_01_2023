@@ -1,6 +1,11 @@
 import React from 'react';
 import styles from "./rating.module.scss";
 import { StarIcon } from "./index";
+import "../../../types";
+
+/**
+ *  @param { Lodging } rating
+ */
 
 const Rating = ({ rating }) => {
   const ratingNumber = parseInt(rating, 10);

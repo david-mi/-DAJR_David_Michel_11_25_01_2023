@@ -1,9 +1,16 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import styles from "./card.module.scss";
+import "../../../types";
 
-const Card = ({ logement }) => {
-  const { id, title, cover, description } = logement;
+/**
+ * @param {{
+ *  lodging: Lodging
+ * }}
+ */
+
+const Card = ({ lodging }) => {
+  const { id, title, cover, description } = lodging;
 
   return (
     <Link to={id} className={styles.link}>

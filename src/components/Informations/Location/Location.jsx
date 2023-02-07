@@ -1,5 +1,10 @@
 import React from 'react';
 import styles from "./location.module.scss";
+import "../../../types";
+
+/**
+ *  @param { Lodging } location
+ */
 
 const Location = ({ location }) => {
   return (

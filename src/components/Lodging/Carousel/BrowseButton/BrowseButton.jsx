@@ -2,6 +2,16 @@ import React from 'react';
 import styles from "./browseButton.module.scss";
 import ArrowIcon from "../../../svg/ArrowIcon/ArrowIcon";
 
+
+/**
+* @param {{ 
+*    options: {
+*      handler: () =>,
+*     direction: "left" | "right" 
+*   }
+* }} 
+*/
+
 const Button = ({ options }) => {
   const { handler, direction, display } = options;
   const buttonClass = display ? "hide" : "";

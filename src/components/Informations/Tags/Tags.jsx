@@ -1,5 +1,10 @@
 import React from 'react';
 import styles from "./tags.module.scss";
+import "../../../types";
+
+/**
+ *  @param { Lodging } tags
+ */
 
 const Tags = ({ tags }) => {
   return (

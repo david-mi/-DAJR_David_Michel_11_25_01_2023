@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import styles from "./collapse.module.scss";
 import { DropDownButton } from "./index";
 
+/**
+ * @param {{
+ *  name: string,
+ *  children: JSX.Element
+ * }} 
+ */
+
 const Collapse = ({ name, children }) => {
   const [showContent, setShowContent] = useState(false);
 

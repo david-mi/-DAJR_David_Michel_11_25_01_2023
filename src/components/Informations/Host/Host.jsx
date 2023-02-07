@@ -1,6 +1,11 @@
 import React from 'react';
 import styles from "./host.module.scss";
 import { Picture, Name } from "./index";
+import "../../../types";
+
+/**
+ *  @param { Lodging } host
+ */
 
 const Host = ({ host }) => {
   return (

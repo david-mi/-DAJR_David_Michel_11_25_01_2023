@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./carousel.module.scss";
 import { BrowseButton, Picture } from "./index";
+import "../../../types";
+
+/**
+ *  @param { Lodging } pictures
+ */
 
 const Carousel = ({ pictures }) => {
   const [picture, setPicture] = useState(pictures[0]);

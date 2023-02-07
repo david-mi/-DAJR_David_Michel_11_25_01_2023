@@ -1,5 +1,11 @@
 import styles from "./loader.module.scss";
 
+/**
+ * @param {{
+ *    dotColor: string
+ * }} 
+ */
+
 const Loader = ({ dotColor = "white" }) => {
   const numberOfDots = 12;
   const dotsJsx = Array(numberOfDots)
