@@ -2,9 +2,11 @@ import React from 'react';
 import styles from "./host.module.scss";
 import { Picture, Name } from "./index";
 import "../../../types";
+import { HostPropTypes } from "./propTypes";
 
 /**
- *  @param { Lodging } host
+ * @param {Object} props
+ * @param {Host} props.host
  */
 
 const Host = ({ host }) => {
@@ -15,5 +17,7 @@ const Host = ({ host }) => {
     </div>
   );
 };
+
+Host.propTypes = HostPropTypes;
 
 export default Host;

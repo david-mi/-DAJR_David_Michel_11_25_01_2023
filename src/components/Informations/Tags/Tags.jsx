@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from "./tags.module.scss";
 import "../../../types";
+import { TagsPropTypes } from "./propTypes";
 
 /**
- *  @param { Lodging } tags
+ * @param {Object} props
+ * @param {string[]} props.tags
  */
 
 const Tags = ({ tags }) => {
@@ -13,5 +15,7 @@ const Tags = ({ tags }) => {
     </ul>
   );
 };
+
+Tags.propTypes = TagsPropTypes;
 
 export default Tags;

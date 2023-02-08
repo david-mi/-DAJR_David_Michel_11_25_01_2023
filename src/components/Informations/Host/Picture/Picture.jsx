@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from "./picture.module.scss";
 import "../../../../types";
+import { PicturePropTypes } from "./propTypes";
 
 /**
- *  @param { Lodging } host
+ * @param {Object} props
+ * @param {Host} props.host
  */
 
 const Picture = ({ host }) => {
@@ -13,5 +15,7 @@ const Picture = ({ host }) => {
     </div>
   );
 };
+
+Picture.propTypes = PicturePropTypes;
 
 export default Picture;

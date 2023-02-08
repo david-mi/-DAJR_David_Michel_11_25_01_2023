@@ -1,11 +1,11 @@
 
 import React from 'react';
 import styles from "./starIcon.module.scss";
+import { StarIconPropTypes } from "./propTypes";
 
 /**
- * @param {{
- *  className: string
- * }} 
+ * @param {Object} props
+ * @param {string} props.className
  */
 
 const StarIcon = ({ className }) => {
@@ -22,5 +22,7 @@ const StarIcon = ({ className }) => {
     </svg>
   );
 };
+
+StarIcon.propTypes = StarIconPropTypes;
 
 export default StarIcon;

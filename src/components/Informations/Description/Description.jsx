@@ -1,8 +1,10 @@
 import React from 'react';
 import "../../../types";
+import { DescriptionPropTypes } from "./propTypes";
 
 /**
- *  @param { Lodging } description
+ * @param {Object} props
+ * @param {string} props.description
  */
 
 const Description = ({ description }) => {
@@ -10,5 +12,7 @@ const Description = ({ description }) => {
     <p>{description}</p>
   );
 };
+
+Description.propTypes = DescriptionPropTypes;
 
 export default Description;

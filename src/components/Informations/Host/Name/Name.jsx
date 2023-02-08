@@ -1,10 +1,11 @@
 import React from 'react';
 import style from "./name.module.scss";
-
 import "../../../../types";
+import { NamePropType } from "./propTypes";
 
 /**
- *  @param { Host } name
+ *  @param {Object} props
+ * @param {string} props.name
  */
 
 const Name = ({ name }) => {
@@ -12,5 +13,7 @@ const Name = ({ name }) => {
     <div className={style.name}>{name}</div>
   );
 };
+
+Name.propTypes = NamePropType;
 
 export default Name;

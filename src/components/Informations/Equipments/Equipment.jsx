@@ -1,8 +1,10 @@
 import React from 'react';
 import "../../../types";
+import { EquipmentsPropTypes } from "./propTypes";
 
 /**
- *  @param { Lodging } equipments
+ * @param {Object} props
+ * @param {string[]} props.equipments
  */
 
 const Equipments = ({ equipments }) => {
@@ -14,5 +16,7 @@ const Equipments = ({ equipments }) => {
     </ul>
   );
 };
+
+Equipments.propTypes = EquipmentsPropTypes;
 
 export default Equipments;

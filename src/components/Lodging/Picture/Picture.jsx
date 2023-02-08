@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from "./picture.module.scss";
+import { PicturePropType } from "./propTypes";
 
 /**
- * @param {{
- *   src: string
- *   alt: string
- * }}
+ * @param {Object} props
+ * @param {string} props.src
+ * @param {string} props.alt
  */
 
 const Picture = ({ src, alt }) => {
@@ -17,5 +17,7 @@ const Picture = ({ src, alt }) => {
     />
   );
 };
+
+Picture.propType = PicturePropType;
 
 export default Picture;

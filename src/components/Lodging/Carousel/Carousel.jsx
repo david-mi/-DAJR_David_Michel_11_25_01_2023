@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import styles from "./carousel.module.scss";
 import { BrowseButton, Picture } from "./index";
 import "../../../types";
+import { CarouselPropTypes } from "./propTypes";
 
 /**
- *  @param { Lodging } pictures
+ * @param {Object} props
+ * @param {string[]} props.pictures
  */
 
 const Carousel = ({ pictures }) => {
@@ -39,5 +41,7 @@ const Carousel = ({ pictures }) => {
     </div>
   );
 };
+
+Carousel.propTypes = CarouselPropTypes;
 
 export default Carousel;

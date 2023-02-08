@@ -2,13 +2,12 @@ import React from 'react';
 import styles from "./informations.module.scss";
 import { Title, Location, Host, Tags, Rating, Description, Equipments } from "./index";
 import Collapse from "../Collapse/Collapse";
-
 import "../../types";
+import { InformationsPropTypes } from "./propTypes";
 
 /**
- *  @param {{
- *    lodging: Lodging
- * }} 
+ * @param {Object} props
+ * @param {Lodging} props.lodging
  */
 
 const Informations = ({ lodging }) => {
@@ -30,5 +29,7 @@ const Informations = ({ lodging }) => {
     </div>
   );
 };
+
+Informations.propTypes = InformationsPropTypes;
 
 export default Informations;

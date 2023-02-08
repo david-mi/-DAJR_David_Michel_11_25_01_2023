@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styles from "./card.module.scss";
 import "../../../types";
+import { CardPropTypes } from "./propTypes";
 
 /**
- * @param {{
- *  lodging: Lodging
- * }}
+ * @param {Object} props
+ * @param {Lodging} props.lodging
  */
 
 const Card = ({ lodging }) => {
@@ -19,5 +19,7 @@ const Card = ({ lodging }) => {
     </Link>
   );
 };
+
+Card.propTypes = CardPropTypes;
 
 export default Card;

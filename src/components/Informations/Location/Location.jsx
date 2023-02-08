@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from "./location.module.scss";
 import "../../../types";
+import { LocationPropTypes } from "./propTypes";
 
 /**
- *  @param { Lodging } location
+ * @param {Object} props
+ * @param {string} props.location
  */
 
 const Location = ({ location }) => {
@@ -11,5 +13,7 @@ const Location = ({ location }) => {
     <h3 className={styles.location}>{location}</h3>
   );
 };
+
+Location.propTypes = LocationPropTypes;
 
 export default Location;

@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from "./dropDownButton.module.scss";
 import ArrowIcon from "../../svg/ArrowIcon/ArrowIcon";
+import { DropDownButtonPropTypes } from "./propTypes";
 
 /**
- * @param {{
- *  name: string,
- *  showContent: boolean,
- *  setShowContent: React.Dispatch<React.SetStateAction<boolean>>
- * }}
+ * @param {Object} props
+ * @param {string} props.name
+ * @param {boolean} props.showContent
+ * @param {React.Dispatch<React.SetStateAction<boolean>>} props.setShowContent
  */
 
 const Button = ({ name, showContent, setShowContent }) => {
@@ -20,5 +20,7 @@ const Button = ({ name, showContent, setShowContent }) => {
     </button>
   );
 };
+
+Button.propTypes = DropDownButtonPropTypes;
 
 export default Button;

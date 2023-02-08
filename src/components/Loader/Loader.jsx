@@ -1,9 +1,10 @@
+import React from "react";
 import styles from "./loader.module.scss";
+import { LoaderPropTypes } from "./propTypes";
 
 /**
- * @param {{
- *    dotColor: string
- * }} 
+ * @param {Object} props
+ * @param {string} [props.dotColor = white]
  */
 
 const Loader = ({ dotColor = "white" }) => {
@@ -18,5 +19,7 @@ const Loader = ({ dotColor = "white" }) => {
     </div>
   );
 };
+
+Loader.propTypes = LoaderPropTypes;
 
 export default Loader;

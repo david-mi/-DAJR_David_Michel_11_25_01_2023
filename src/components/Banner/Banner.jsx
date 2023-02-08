@@ -1,13 +1,15 @@
 import React from 'react';
 import styles from "./banner.module.scss";
+import { BannerPropTypes } from "./propTypes";
 
 import { Picture } from "./index";
 
 /**
- * @param {{
- *  title: string
- *  image: string
- * }} 
+ * @param {Object} props
+ * @param {string=} props.title
+ * @param {Object} props.image
+ * @param {string} props.image.src
+ * @param {string} props.image.alt
  */
 
 const Banner = ({ title, image }) => {
@@ -18,5 +20,7 @@ const Banner = ({ title, image }) => {
     </div>
   );
 };
+
+Banner.propTypes = BannerPropTypes;
 
 export default Banner;

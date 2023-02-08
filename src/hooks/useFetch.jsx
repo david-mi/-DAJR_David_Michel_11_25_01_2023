@@ -8,7 +8,7 @@ import "../types";
  * - If service throws an error, a new {@link error} is set
  * - If service returns data, setting it to {@link data}
  * 
- * @param {string} lodgingId
+ * @param {string=} lodgingId
  * @returns {{
  *  data: null | Lodgings | Lodging,
  *  error: null | Error,
@@ -28,7 +28,7 @@ const useFetch = (lodgingId) => {
         // simulating long wait from api
         await new Promise((resolve) => setTimeout(resolve, 1000));
 
-        let apiData = "";
+        let apiData = null;
 
         if (lodgingId) {
           apiData = await lodgingServices.getLodgingById(lodgingId);

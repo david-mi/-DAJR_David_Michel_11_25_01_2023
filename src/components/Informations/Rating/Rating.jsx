@@ -2,9 +2,11 @@ import React from 'react';
 import styles from "./rating.module.scss";
 import { StarIcon } from "./index";
 import "../../../types";
+import { RatingPropTypes } from "./propTypes";
 
 /**
- *  @param { Lodging } rating
+ * @param {Object} props
+ * @param {string} props.rating
  */
 
 const Rating = ({ rating }) => {
@@ -26,5 +28,7 @@ const Rating = ({ rating }) => {
     </div>
   );
 };
+
+Rating.propTypes = RatingPropTypes;
 
 export default Rating;

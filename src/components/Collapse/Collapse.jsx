@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import styles from "./collapse.module.scss";
 import { DropDownButton } from "./index";
+import { CollapsePropTypes } from "./propTypes";
 
 /**
- * @param {{
- *  name: string,
- *  children: JSX.Element
- * }} 
+ * @param {Object} props
+ * @param {string} props.name
+ * @param {JSX.Element} props.children
  */
 
 const Collapse = ({ name, children }) => {
@@ -27,5 +27,7 @@ const Collapse = ({ name, children }) => {
     </article>
   );
 };
+
+Collapse.propTypes = CollapsePropTypes;
 
 export default Collapse;

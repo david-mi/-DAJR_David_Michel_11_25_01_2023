@@ -1,3 +1,6 @@
+import React from "react";
+import { KasaLogoPropTypes } from "./propTypes";
+
 const KasaLogo = ({ className }) => {
   return (
     <svg className={className} viewBox="0 0 122 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -9,5 +12,7 @@ const KasaLogo = ({ className }) => {
     </svg>
   );
 };
+
+KasaLogo.propTypes = KasaLogoPropTypes;
 
 export default KasaLogo;

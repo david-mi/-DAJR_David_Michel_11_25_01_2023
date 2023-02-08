@@ -11,7 +11,6 @@ const Collapses = () => {
           <Collapse
             key={name}
             name={name}
-            content={content}
           >
             <p>{content}</p>
           </Collapse>
