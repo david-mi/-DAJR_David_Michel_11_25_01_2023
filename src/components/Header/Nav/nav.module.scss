@@ -1,5 +1,3 @@
-@use "../../../styles/abstracts/mixins" as *;
-
 .nav {
   margin-left: auto;
 
@@ -8,7 +6,7 @@
     gap: clamp(10px, 6vw - 1.5rem, 57px);
 
     a {
-      color: var(--clr-main);
+      color: #ff6060;
 
       font-size: clamp(12px, 3vw, 24px);
       font-weight: 500;
@@ -17,7 +15,7 @@
         text-decoration: underline;
       }
 
-      @include mobile {
+      @media screen and (max-width: 600px) {
         text-transform: uppercase;
       }
     }

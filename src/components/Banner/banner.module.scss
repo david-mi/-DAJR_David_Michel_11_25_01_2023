@@ -1,5 +1,3 @@
-@use "../../styles/abstracts/mixins" as *;
-
 .banner {
   position: relative;
   border-radius: clamp(10px, 2vw, 25px);
@@ -7,13 +5,16 @@
   overflow: hidden;
 
   .expression {
-    @include absoluteCenter;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     font-size: clamp(24px, 4vw, 48px);
     font-weight: 500;
     color: white;
     width: 80%;
     text-align: center;
-    @include mobile {
+    @media screen and (max-width: 375px) {
       text-align: left;
     }
   }

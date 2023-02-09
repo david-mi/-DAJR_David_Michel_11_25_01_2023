@@ -4,11 +4,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-body {
-  --clr-main: #ff6060;
-  --clr-footer: black;
-}
-
 #root {
   min-height: 100vh;
   padding-inline: clamp(20px, 9vw - 1.8vmax, 100px);

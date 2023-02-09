@@ -1,5 +1,3 @@
-@use "../../../styles/abstracts/mixins" as *;
-
 .carousel {
   position: relative;
 
@@ -11,7 +9,7 @@
     color: white;
     font-weight: 500;
 
-    @include mobile {
+    @media screen and (max-width: 375px) {
       display: none;
     }
   }

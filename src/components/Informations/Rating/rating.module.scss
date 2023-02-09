@@ -1,12 +1,10 @@
-@use "../../../styles/abstracts/mixins" as *;
-
 .rating {
   grid-area: rating;
   display: flex;
   align-items: center;
   justify-self: flex-end;
 
-  @include medium {
+  @media screen and (max-width: 750px) {
     justify-self: flex-start;
   }
 
