@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import styles from "./lodging.module.scss";
 import useFetch from "../../hooks/useFetch";
 import NotFound from "../../pages/NotFound/NotFound";
-import Loader from "../Loader/Loader";
+import Loader from "../../components/Loader/Loader";
 import { Carousel, Picture } from "./index";
-import Informations from "../Informations/Informations";
+import Informations from "../../components/Informations/Informations";
 
 const Lodging = () => {
   const { id: lodgingId } = useParams();

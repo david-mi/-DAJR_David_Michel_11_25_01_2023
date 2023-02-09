@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
-import Lodging from "./components/Lodging/Lodging";
+import Lodging from "./pages/Lodging/Lodging";
 import About from "./pages/About/About";
 import NotFound from "./pages/NotFound/NotFound";
 
