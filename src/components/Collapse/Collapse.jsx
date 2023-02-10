@@ -9,11 +9,12 @@ import { CollapsePropTypes } from "./propTypes";
  * 
  * @param {Object} props
  * @param {string} props.name
+ * @param {boolean=} props.showByDefault
  * @param {JSX.Element} props.children
  */
 
-const Collapse = ({ name, children }) => {
-  const [showContent, setShowContent] = useState(false);
+const Collapse = ({ name, children, showByDefault }) => {
+  const [showContent, setShowContent] = useState(showByDefault || false);
 
   return (
     <article className={styles.collapse}>

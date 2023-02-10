@@ -8,11 +8,12 @@ import { aboutData } from "./data";
 const Collapses = () => {
   return (
     <section className={styles.collapses}>
-      {aboutData.map(({ name, content }) => {
+      {aboutData.map(({ name, content }, index) => {
         return (
           <Collapse
             key={name}
             name={name}
+            showByDefault={index === 0 ? true : false}
           >
             <p>{content}</p>
           </Collapse>
