@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./loader.module.scss";
 import { LoaderPropTypes } from "./propTypes";
 
-/**
+/**  
  * @param {Object} props
  * @param {string} [props.dotColor = white]
  */

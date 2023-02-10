@@ -4,6 +4,9 @@ import { DropDownButton } from "./index";
 import { CollapsePropTypes } from "./propTypes";
 
 /**
+ * Collapse with a button too show content and content
+ * who is passed as a children
+ * 
  * @param {Object} props
  * @param {string} props.name
  * @param {JSX.Element} props.children

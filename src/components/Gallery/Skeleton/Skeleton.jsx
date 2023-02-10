@@ -3,6 +3,8 @@ import SkeletonCard from "./Card/Card";
 import { SkeletonPropTypes } from "./propTypes";
 
 /**
+ * Skeleton to display while waiting for fetch data
+ * 
  * @param {Object} props
  * @param {number} props.length
  */

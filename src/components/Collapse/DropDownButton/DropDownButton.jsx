@@ -4,6 +4,8 @@ import ArrowIcon from "../../svg/ArrowIcon/ArrowIcon";
 import { DropDownButtonPropTypes } from "./propTypes";
 
 /**
+ * Button to show or hide collapse content
+ * 
  * @param {Object} props
  * @param {string} props.name
  * @param {boolean} props.showContent

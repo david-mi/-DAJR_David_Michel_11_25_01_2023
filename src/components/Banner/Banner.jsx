@@ -5,6 +5,8 @@ import { BannerPropTypes } from "./propTypes";
 import { Picture } from "./index";
 
 /**
+ * Show a banner, made with a picture and an optional text
+ * 
  * @param {Object} props
  * @param {string=} props.title
  * @param {Object} props.image

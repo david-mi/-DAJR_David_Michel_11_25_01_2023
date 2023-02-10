@@ -3,18 +3,22 @@ import { lodgingServices } from "../services/lodging";
 import "../types";
 
 /**
+ * @typedef {Object} useFetchReturn
+ * @property {Lodgings | Lodging | null}  data
+ * @property {boolean} isWaitingFetch
+ * @property {Error | null} error
+ */
+
+/**
  * Custom Hook to handle fetch calls
  * - While waiting for service response, {@link isWaitingFetch} is set to true
  * - If service throws an error, a new {@link error} is set
  * - If service returns data, setting it to {@link data}
  * 
  * @param {string=} lodgingId
- * @returns {{
- *  data: null | Lodgings | Lodging,
- *  error: null | Error,
- *  isWaitingFetch: boolean
- * }}
+ * @returns {useFetchReturn}
  */
+
 
 const useFetch = (lodgingId) => {
   const [data, setData] = useState(null);

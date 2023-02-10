@@ -2,6 +2,19 @@ import React from 'react';
 import { Card, Skeleton } from "./index";
 import styles from "./galery.module.scss";
 import { GalleryPropTypes } from "./propTypes";
+import "../../types";
+
+/**
+ * Show Skeleton component while waiting for {@link data}
+ * Show Gallery component once data arrived
+ * If an error occurs, shows it
+ * 
+ * @param {Object} props
+ * @param {Object} props.fetchInfos
+ * @param {Lodgings | null}  props.fetchInfos.data
+ * @param {boolean} props.fetchInfos.isWaitingFetch
+ * @param {Error | null} props.fetchInfos.error
+ */
 
 const Gallery = ({ fetchInfos }) => {
   const { data, isWaitingFetch, error } = fetchInfos;

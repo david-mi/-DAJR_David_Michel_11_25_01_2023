@@ -6,6 +6,8 @@ import "../../types";
 import { InformationsPropTypes } from "./propTypes";
 
 /**
+ * Display all informations from the current lodging
+ * 
  * @param {Object} props
  * @param {Lodging} props.lodging
  */
