@@ -29,8 +29,6 @@ const useFetch = (lodgingId) => {
     async function getData() {
       try {
         setIsWaitingFetch(true);
-        // simulating long wait from api
-        await new Promise((resolve) => setTimeout(resolve, 1000));
 
         let apiData = null;
 
