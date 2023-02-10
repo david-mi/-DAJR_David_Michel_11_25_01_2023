@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./carousel.module.scss";
 import { BrowseButton, Picture } from "./index";
-import "../../../types";
+import "../../types";
 import { CarouselPropTypes } from "./propTypes";
 
 /**

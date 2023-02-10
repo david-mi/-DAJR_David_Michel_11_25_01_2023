@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./browseButton.module.scss";
-import ArrowIcon from "../../../../components/svg/ArrowIcon/ArrowIcon";
+import ArrowIcon from "../../svg/ArrowIcon/ArrowIcon";
 import { BrowseButtonPropTypes } from "./propTypes";
 
 /**

@@ -4,7 +4,8 @@ import styles from "./lodging.module.scss";
 import useFetch from "../../hooks/useFetch";
 import NotFound from "../../pages/NotFound/NotFound";
 import Loader from "../../components/Loader/Loader";
-import { Carousel, Picture } from "./index";
+import Carousel from "../../components/Carousel/Carousel";
+import Picture from "../../components/Picture/Picture";
 import Informations from "../../components/Informations/Informations";
 
 const Lodging = () => {
