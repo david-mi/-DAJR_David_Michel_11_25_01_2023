@@ -3,6 +3,7 @@ import styles from "./about.module.scss";
 import Collapses from "../../components/Collapses/Collapses";
 import Banner from "../../components/Banner/Banner";
 import bannerAboutImage from "../../assets/banner/about.jpg";
+import { aboutData } from "./data";
 
 const bannerAboutImageOptions = {
   src: bannerAboutImage,
@@ -13,7 +14,7 @@ const About = () => {
   return (
     <main className={styles.about}>
       <Banner image={bannerAboutImageOptions} />
-      <Collapses />
+      <Collapses data={aboutData} />
     </main>
   );
 };

@@ -1,14 +1,25 @@
 import React from 'react';
 import styles from "./collapses.module.scss";
 import Collapse from "../Collapse/Collapse";
-import { aboutData } from "./data";
+import { CollapsesPropTypes } from "./propTypes";
 
-/** Create a Collapse component for each element in {@link aboutData}*/
+/**
+ * @typedef {Object} data
+ * @property {string} name
+ * @property {string} content
+ */
 
-const Collapses = () => {
+/**
+ * Create a Collapse component for each element in {@link data}
+ * 
+ * @param {Object} props
+ * @param {Array<data>} props.data
+ */
+
+const Collapses = ({ data }) => {
   return (
     <section className={styles.collapses}>
-      {aboutData.map(({ name, content }, index) => {
+      {data.map(({ name, content }, index) => {
         return (
           <Collapse
             key={name}
@@ -22,5 +33,7 @@ const Collapses = () => {
     </section>
   );
 };
+
+Collapses.propTypes = CollapsesPropTypes;
 
 export default Collapses;
